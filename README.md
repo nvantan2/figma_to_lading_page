@@ -6,6 +6,14 @@ npm install
 
 ```
 
+
+# dev
+
+```
+npm run st
+
+```
+
 # build
 
 ```
