@@ -10,7 +10,7 @@ npm install
 # dev
 
 ```
-npm run st
+npm run start
 
 ```
 
