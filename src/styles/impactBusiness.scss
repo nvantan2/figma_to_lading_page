@@ -1,0 +1,150 @@
+@import "./commons/responsive.scss";
+
+.impact-business {
+  background-color: #f29d21;
+  width: 100%;
+  padding: 50px 20px;
+  @include tablet-large() {
+    padding: 30px;
+  }
+  @include destop() {
+    padding: 60px;
+  }
+  @include destop-large() {
+    padding: 74px 74px 90px 80px;
+  }
+  &__title {
+    color: #004260;
+    font-weight: bold;
+    font-size: 20px;
+    @include mobile-large() {
+      padding-left: 10px;
+    }
+    @include tablet-large() {
+      padding-left: 15px;
+      font-size: 22px;
+    }
+    @include destop() {
+      font-size: 26px;
+    }
+    @include destop-large() {
+      font-size: 30px;
+      max-width: 450px;
+    }
+  }
+  &__content {
+    margin-top: 15px;
+    width: 100%;
+    @include mobile-large() {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include tablet-large() {
+      margin-top: 30px;
+    }
+  }
+  &__box {
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: flex;
+    overflow: hidden;
+    @include mobile-large() {
+      width: calc(50% - 20px);
+      padding: 10px;
+      margin-bottom: 0;
+    }
+    @include tablet-large() {
+      width: calc(33.3333% - 30px);
+      padding: 15px;
+    }
+    @include destop() {
+      width: calc(25% - 40px);
+      padding: 20px;
+    }
+    &:hover {
+      @include tablet-large() {
+        > div {
+          &:first-child {
+            transform: translateX(0);
+            transition: all 0.3s;
+          }
+          &:last-child {
+            transform: translateX(0);
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+    h6 {
+      padding: 10px;
+      color: #004260;
+      font-size: 14px;
+      font-weight: 500;
+      @include destop-large() {
+        margin-bottom: 10px;
+        padding-left: 20px;
+      }
+    }
+    > div {
+      min-width: calc(100% + 20px);
+      @include tablet-large() {
+        min-width: calc(100% + 30px);
+      }
+      p {
+        font-size: 16px;
+        @include tablet() {
+          margin-bottom: 6px;
+        }
+        @include destop-large() {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+      &:first-child {
+        h6 {
+          font-weight: 700;
+        }
+        @include tablet-large() {
+          transform: translateX(calc(-100% - 31px));
+          transition: all 0.3s;
+        }
+        p {
+          color: #fff;
+        }
+      }
+      &:last-child {
+        .impact-business__desc {
+          background-color: #fff;
+        }
+        @include tablet-large() {
+          transform: translateX(calc(-100%));
+          transition: all 0.3s;
+        }
+        p {
+          color: #27133e;
+        }
+      }
+    }
+  }
+  &__desc {
+    background-color: #004260;
+    padding: 10px;
+    @include destop-large() {
+      padding: 21px;
+    }
+  }
+  &__arrow {
+    text-align: right;
+    padding-right: 30px;
+    @include destop() {
+      padding-right: 20px;
+    }
+    img {
+      width: 46px;
+    }
+    // @include destop-large() {
+    // 	padding-right: 15px;
+    // }
+  }
+}

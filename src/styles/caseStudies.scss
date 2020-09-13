@@ -1,0 +1,118 @@
+@import "./commons/responsive.scss";
+.case-studies {
+  background-color: #f7e9da;
+  padding: 50px 10px;
+  .container > .row {
+    display: flex;
+    flex-direction: column;
+    @include tablet-large() {
+      flex-direction: row;
+      align-items: center;
+    }
+    @include destop-large() {
+      padding-top: 150px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 20px;
+    @include tablet-large() {
+      width: 60%;
+    }
+    @include destop-large() {
+      width: 58%;
+    }
+    > div {
+      padding-left: 50px;
+      @include tablet-large() {
+        padding-left: 80px;
+      }
+      @include destop() {
+        padding-left: 145px;
+      }
+      @include destop-large() {
+        padding-left: 210px;
+      }
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    color: #f29d21;
+    transform: rotate(-90deg);
+    font-size: 14px;
+    @include mobile-large() {
+      font-size: 16px;
+    }
+    @include tablet() {
+      font-size: 18px;
+      top: 50px;
+      left: -35px;
+    }
+    @include tablet-large() {
+      font-size: 24px;
+      top: 75px;
+    }
+    @include destop() {
+      left: -10px;
+    }
+    @include destop-large() {
+      left: 20px;
+    }
+  }
+  &__heading {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 134.1%;
+    color: #004260;
+    @include mobile-large {
+      font-size: 24px;
+    }
+    @include tablet() {
+      font-size: 30px;
+    }
+    @include tablet-large() {
+      font-size: 48px;
+    }
+  }
+  &__desc {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 134.1%;
+    color: #27133e;
+    @include mobile-large() {
+      font-size: 18px;
+    }
+    @include tablet() {
+      font-size: 22px;
+    }
+    @include tablet-large() {
+      font-size: 30px;
+    }
+    @include destop-large() {
+      margin-top: 30px;
+    }
+  }
+  &__img {
+    width: 100%;
+    @include tablet-large() {
+      width: 40%;
+    }
+    text-align: center;
+    @include destop-large() {
+      padding-right: 50px;
+    }
+    img {
+      width: 90%;
+      @include tablet() {
+        width: 60%;
+      }
+      @include tablet-large() {
+        width: 100%;
+      }
+    }
+  }
+}

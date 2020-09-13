@@ -1,0 +1,226 @@
+@import "./commons/responsive.scss";
+.help-other {
+  padding-bottom: 20px;
+  position: relative;
+  height: 681.27px;
+  .container {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  @include destop-large() {
+    padding-bottom: 0;
+  }
+
+  #myVideo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &__top {
+    padding-top: 50px;
+    color: #27133e;
+    text-align: center;
+    @include tablet() {
+      text-align: left;
+      padding-left: 25px;
+      padding-top: 30px;
+    }
+    @include tablet-large() {
+      padding-left: 70px;
+      padding-top: 50px;
+    }
+    @include destop() {
+      padding-left: 85px;
+      padding-top: 65px;
+    }
+    @media (min-width: 1440px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    width: 100%;
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #27133e;
+      @include tablet() {
+        font-size: 22px;
+      }
+      @include destop() {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 70px 25px 5px;
+    z-index: 3;
+    @include tablet() {
+      justify-content: flex-start;
+      padding: 100px 25px 5px;
+    }
+    @include tablet-large() {
+      padding: 290px 70px 0;
+    }
+    @include destop() {
+      padding: 430px 90px 0;
+      justify-content: space-between;
+    }
+    @include destop() {
+      padding: 430px 95px 0;
+    }
+    @media (min-width: 1440px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    > div {
+      width: 70%;
+      padding: 5px;
+      cursor: default;
+      @include mobile-large() {
+        width: 50%;
+      }
+      @include tablet() {
+        width: 33.3333%;
+      }
+      @include tablet-large() {
+        width: 25%;
+      }
+      @include destop() {
+        width: 24%;
+      }
+    }
+  }
+
+  &__box {
+    border-top: 4px solid #004269;
+    overflow: hidden;
+    @include tablet-large() {
+      border-top-color: #f29d21;
+    }
+    @include destop() {
+      border-width: 8px;
+    }
+    @include destop-large() {
+      border-width: 10px;
+    }
+    > p {
+      color: #fff;
+      font-size: 14px;
+      padding: 5px;
+      @include tablet-large() {
+        font-size: 18px;
+      }
+      @include destop() {
+        font-size: 24px;
+      }
+      @include destop-large() {
+        font-size: 30px;
+        padding: 21px 25px;
+      }
+    }
+
+    &:hover {
+      @include tablet-large() {
+        border-top-color: #004269;
+        transition: all 0.3s;
+        .help-other__more {
+          top: -39px;
+          transition: all 0.3s;
+        }
+      }
+      @include destop-large() {
+        .help-other__more {
+          top: -78px;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
+  &__more {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background-color: #f29d21;
+    z-index: 15;
+    top: -29px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    // height: 0;
+    @include tablet() {
+      padding: 20px;
+      // top: -115px;
+    }
+    @include tablet-large() {
+      top: -115px;
+    }
+    @include destop() {
+      padding: 10px;
+      top: -153px;
+    }
+    @include destop-large() {
+      padding: 21px 25px;
+      top: -220px;
+    }
+    transition: all 0.3s;
+    p:last-child {
+      color: #27133e;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      @include destop() {
+        font-size: 24px;
+      }
+      @include destop-large() {
+        font-size: 30px;
+      }
+      img {
+        width: 45px;
+        height: auto;
+      }
+    }
+
+    p:first-child {
+      color: #004260;
+      padding-bottom: 5px;
+      font-size: 18px;
+      @include tablet-large() {
+        padding-bottom: 10px;
+      }
+      @include destop() {
+        font-size: 24px;
+      }
+      @include destop-large() {
+        font-size: 30px;
+      }
+      // @include destop() {
+      // 	font-size: 30px;
+      // }
+    }
+  }
+
+  &__btn {
+    border-radius: 50%;
+    background-color: #27133e;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    padding: 0px 0 2px 4px;
+  }
+}

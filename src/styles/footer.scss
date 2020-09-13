@@ -1,0 +1,114 @@
+footer {
+  position: relative;
+  background-color: #004260;
+  height: 341.72px;
+  width: 100%;
+  @media (max-width: 470px) {
+    height: initial;
+    .footer_wrapper {
+      flex-direction: column;
+      padding-top: 20px !important;
+      & > div {
+        padding: 15px 20px 15px 30px !important;
+        &.col-left {
+          img {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+  .footer_wrapper {
+    display: flex;
+    padding: 46px 0 38.56px;
+
+    & > div {
+      box-sizing: border-box;
+      width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      &.col-left {
+        padding-left: 109px;
+        padding-right: 15px;
+
+        @media (max-width: 768px) {
+          padding-left: 30px;
+        }
+        @media (max-width: 470px) {
+          margin-bottom: 20px;
+        }
+        height: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 135px;
+          height: 46px;
+          margin-bottom: 44.96px;
+        }
+        a {
+          color: #fff;
+          font-size: 14px;
+          z-index: 4;
+          text-transform: uppercase;
+        }
+        .footer__help {
+          z-index: 4;
+          margin-bottom: 68.21px;
+          @media (max-width: 470px) {
+            margin-bottom: 20px;
+          }
+          & > div {
+            display: flex;
+            flex-direction: column;
+            & > a {
+              margin-bottom: 5px;
+            }
+          }
+          & > a {
+            display: inline-block;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      &.col-right {
+        padding: 0 15px;
+        p {
+          margin-bottom: 10px;
+          color: #fff;
+          font-size: 14px;
+        }
+        a {
+          color: #fff;
+          font-size: 14px;
+          font-weight: normal;
+        }
+        .particles-js-canvas-el {
+          width: 50% !important;
+          height: 100%;
+          left: 45%;
+        }
+        @media (max-width: 470px) {
+          position: relative;
+          .particles-js-canvas-el {
+            width: 100% !important;
+            left: initial;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+      & > .footer__address {
+        margin-bottom: 40.38px;
+        @media (max-width: 470px) {
+          margin-bottom: 20px;
+        }
+      }
+      & > .footer__info {
+        p:nth-child(2) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
